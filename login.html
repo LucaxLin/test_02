@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+            background-color: lightgray;
+            border-radius: 10px;
+            box-shadow: 10px 5px 10px;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        input {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid #000;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        #password {
+            top: 100px;
+        }
+        
+        span {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        i {
+            position: absolute;
+            z-index: 999;
+            left: 306px;
+            top: 98px;
+            width: 20px;
+            height: 20px;
+            background-image: url(../img/close.png);
+            background-size: contain;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>logIn</h2>
+        <form action="">
+            <span>username: </span><input type="text" autocomplete="off" name="username" id="username" placeholder="pls enter username">
+            <br> <span>password:</span>
+            <input type="password" name="password" id="password"><i></i>
+            <br>
+            <button type="submit" class="submit">logIn</button>
+        </form>
+    </div>
+    <script>
+        var eye = document.querySelector('i')
+        var pw = document.getElementById('password')
+        eye.onclick = function() {
+            if (pw.type == 'password') {
+                this.style.backgroundImage = 'url("../img/open.png")'
+                pw.type = 'text'
+            } else if (pw.type == 'text') {
+                this.style.backgroundImage = 'url("../img/close.png")'
+                pw.type = 'password'
+            } else {
+                alert('something is wrong')
+            }
+        }
+    </script>
+</body>
+
+</html>

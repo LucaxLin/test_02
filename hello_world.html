@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <img src="" alt="">
+    <script>
+        var time = new Date();
+        var hr = time.getHours()
+        var hi = document.querySelector('p')
+        var pic = document.querySelector('img')
+        if (hr < 12) {
+            hi.innerHTML = 'good morning'
+            pic.src = '../img/z.gif'
+        } else if (hr < 16) {
+            hi.innerHTML = 'good afternoon'
+            pic.src = '../img/s.gif'
+        } else {
+            hi.innerHTML = 'good night'
+            pic.src = '../img/w.gif'
+        }
+    </script>
+</body>
+
+</html>
